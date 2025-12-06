@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viking Blancos</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    header { background: #111; color: #fff; padding: 20px; text-align: center; }
+    header img { max-height: 80px; }
+    h1 { margin: 10px 0; }
+    main { padding: 20px; }
+    section { margin-bottom: 30px; background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; }
+    footer { background: #111; color: #fff; text-align: center; padding: 15px; }
+    a { color: #0077cc; text-decoration: none; }
+    .match { padding: 5px 0; border-bottom: 1px solid #eee; }
+    .match:last-child { border-bottom: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <!--ضع شعارك هنا -->
+    <img src="Viking.png" alt="Viking Blancos Logo">
+    <h1>Viking Blancos</h1>
+  </header>
+
+  <main>
+    <section id="fixtures">
+      <h2>جدول المباريات القادمة</h2>
+      <div id="matches">
+        <!-- سيتم ملء المباريات تلقائيًا -->
+      </div>
+    </section>
+
+    <section id="results">
+      <h2>النتائج المباشرة</h2>
+      <div id="live-results">
+        <!-- سيتم ملء النتائج تلقائيًا -->
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>أخبار ريال مدريد</h2>
+      <div id="news-feed">
+        <!-- سيتم جلب الأخبار تلقائيًا -->
+      </div>
+    </section>
+
+    <section id="youtube">
+      <h2>ملخصات يوتيوب</h2>
+      <div id="youtube-videos">
+        <!-- يتم جلب الفيديوهات تلقائيًا -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Viking Blancos. جميع الحقوق محفوظة.<br>
+    هذا الموقع غير رسمي وغير تابع لنادي ريال مدريد.
+  </footer>
+
+  <script>
+    // مثال لجلب المباريات القادمة من API مجاني (يمكن استبداله بالAPI الحقيقي)
+    const matches = [
+      { home: "ريال مدريد", away: "برشلونة", date: "2025-12-10" },
+      { home: "ريال مدريد", away: "أتلتيكو مدريد", date: "2025-12-17" },
+    ];
+
+    const matchesDiv = document.getElementById('matches');
+    matches.forEach(match => {
+      const div = document.createElement('div');
+      div.className = 'match';
+      div.textContent = `${match.date}: ${match.home} ضد ${match.away}`;
+      matchesDiv.appendChild(div);
+    });
+
+    // هنا يمكنك إضافة جلب النتائج المباشرة والأخبار وفيديوهات يوتيوب عبر API
+  </script>
+</body>
+</html>
